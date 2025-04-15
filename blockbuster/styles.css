@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fa-expand {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+#lyrics {
+    font-size: 36px;
+    color: white;
+}
+
+#line1, #line2, #line3, #line4 {
+    font-family: 'Quicksand';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.4);
+    padding: 2px 15px;
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+}
+
+.fa-clover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    color: antiquewhite;
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}

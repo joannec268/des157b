@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockbuster Video</title>
+
+     <!-- Normalize CSS for browser compatability -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+     <!-- Add link to any google fonts used here -->
+     <script src="https://kit.fontawesome.com/b1a23226bb.js" crossorigin="anonymous"></script>
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+ 
+     <!-- My Styles -->
+     <link href="styles.css" rel="stylesheet">
+ 
+     <!-- Meta tag for mobile support -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+     <!-- My Script -->
+     <script src="script.js" defer></script>
+</head>
+<body>
+    <video id="video" muted loop autoplay playsinline>
+        <source src="media/blockbuster1.webm" type="video/webm">
+        <source src="media/blockbuster1.mp4" type="video/mp4">
+
+        <p>Your browser doesn't support HTML5 video. 
+        Here is a <a href="media/blockbuster.mp4">link to the video</a> instead.</p>
+    </video>
+    <i class="fa-solid fa-expand"></i>
+    <i class="fa-solid fa-clover"></i>
+    
+    <section id="lyrics">
+        <p id="line1">If you have moments</p>
+        <p id="line2">where you feel happiness</p>
+        <p id="line3">for a while</p>
+        <p id="line4">It's alright to stop</p>
+    </section>
+</body>
+</html>
