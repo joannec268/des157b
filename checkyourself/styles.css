@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/********** header **********/
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Cute Font", Arial;
+    font-size: 3.8em;
+}
+
+time {
+    font-family: "Quicksand", Serif;
+}
+
+/********** progress bar **********/
+#fixed-container {
+    position: relative; /* allows children to position absolutely inside */
+    width: 1440px; /* or any fixed width you prefer */
+    height: 500px; /* or however tall you want */
+    margin: 0 auto; /* centers it horizontally on the page */
+    overflow: hidden; /* optional, hides anything that goes outside */
+    background-color: white; /* optional for visibility */
+}
+
+#sun, #moon {
+    position: absolute;
+    font-size: 2em;
+}
+
+#sun {
+    top: 75%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+}
+
+#moon {
+    top: 75%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+}
+
+#bar-base {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 1000px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+#p1 {
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+#bar-progress {
+    position: absolute;
+    top: 74%;
+    left: 15.25%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+    background-color: rgb(255, 207, 210);
+    width: 71px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+#line1 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 1px;
+    height: 57px;
+}
+
+#para1 {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
