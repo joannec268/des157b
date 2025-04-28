@@ -46,22 +46,28 @@
 
     function updateProgress(index) {
         const progressBar = document.querySelector('#bar-progress');
-        const progressWidth = (index / (numDataPoints - 1)) * 1000; // full width is 1000px
+        const barBase = document.querySelector('#bar-base');
+        const barBaseRect = barBase.getBoundingClientRect();
+        const barBaseLeft = barBaseRect.left;  // The left edge of the #bar-base relative to the viewport
+        progressBar.style.left = `${barBaseLeft}px`;
+        
+        const progressWidth = (index / (numDataPoints - 1)) * barBaseRect.width; // full width is 1000px
         progressBar.style.width = `${progressWidth}px`;
     }
+
 
     function showDrawing(index) {
         const drawing = [
             '<img src="images/pic1.png" alt="drawing of nini laying down">',
             '<img src="images/pic2.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic3.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic4.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic5.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic6.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic7.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic8.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic9.png" alt="drawing of nini wanting apple">',
-            '<img src="images/pic10.png" alt="drawing of nini wanting apple">',
+            '<img src="images/pic3.png" alt="drawing of nini in the bath">',
+            '<img src="images/pic4.png" alt="drawing of nini in the bath">',
+            '<img src="images/pic5.png" alt="drawing of nini being wrapped in a towel">',
+            '<img src="images/pic6.png" alt="drawing of nini getting dried">',
+            '<img src="images/pic7.png" alt="drawing of nini getting dried">',
+            '<img src="images/pic8.png" alt="drawing of nini getting mad while being dried">',
+            '<img src="images/pic9.png" alt="drawing of nini being homework support">',
+            '<img src="images/pic10.png" alt="drawing of nini eating dental chew">'
         ];
 
         const drawingDiv = document.querySelector('#drawing');

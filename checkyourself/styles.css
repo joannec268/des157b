@@ -14,17 +14,29 @@
 /********** header **********/
 header {
     text-align: center;
+    margin-top: 5%;
 }
 
 h1 {
     font-family: "Cute Font", Arial;
     font-size: 3.8em;
+    line-height: 0;
 }
 
 time {
     font-family: "Quicksand", Serif;
 }
 
+p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1em;
+}
+
+#hint {
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-weight: 500;
+}
 /********** layout**********/
 body {
     background-color: rgb(249, 241, 233);
@@ -41,7 +53,7 @@ body {
 #fixed-container {
     position: relative; 
     width: 100%; /* Use 100% width to make it responsive */
-    max-width: 1440px; /* Optional: limit the maximum width */
+    /* max-width: 1440px;  */
     height: 500px;
     margin: 0 auto; 
     overflow: hidden; 
@@ -69,7 +81,6 @@ body {
     justify-content: space-between;  /* Distribute space evenly between items */
     align-items: center;             /* Align items vertically centered */
     width: 100%;                     /* Ensure the container spans full width */
-    padding: 0 10%;  
 }
 
 #bar-base {
@@ -89,15 +100,15 @@ body {
 #bar-progress {
     position: absolute;
     top: 83%;
-    left: 15.25%;
+    /* left: 15.25%; */
     z-index: 2;
     background-color: rgb(241, 183, 187);
-    width: 71px;
     height: 20px;
     border-radius: 50px;
-    transition: width 0.2s; /* smooth fill */
+    transition: width 0.2s;
     /* width: 0px;  */
     width: 0%; 
+    max-width: 1000px; 
 
 }
 
@@ -146,8 +157,6 @@ body {
 
 #sentence {
     position: absolute;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1em;
     bottom: 30%;
     transform: translateX(-50%);
     /* width: 250px; */
@@ -182,6 +191,20 @@ body {
     #moon {
         top: 85%;
         left: 92%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #sun {
+        top: 85%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #moon {
+        top: 85%;
+        left: 88%;
         transform: translate(-50%, -50%);
     }
 }
