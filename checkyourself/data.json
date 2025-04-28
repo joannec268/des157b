@@ -7,7 +7,7 @@
     "point2" : {
         "time" : "12:52",
         "treat" : "small bits of apple",
-        "reason" : "because mom couldn’t finish it"
+        "reason" : "because I couldn’t finish it"
     },
     "point3" : {
         "time" : "13:37",
@@ -42,11 +42,11 @@
     "point9" : {
         "time" : "16:16",
         "treat" : "one piece of Orijen Lamb Recipe treat",
-        "reason" : "because she is emotional support while mom is doing homework"
+        "reason" : "because she was an emotional support while I was doing homework"
     },
     "point10" : {
         "time" : "21:48",
-        "treat" : "favorite dental chew",
+        "treat" : "a favorite dental chew",
         "reason" : "for a healthy routine"
     }
 }
