@@ -48,7 +48,7 @@
         const progressBar = document.querySelector('#bar-progress');
         const barBase = document.querySelector('#bar-base');
         const barBaseRect = barBase.getBoundingClientRect();
-        const barBaseLeft = barBaseRect.left;  // The left edge of the #bar-base relative to the viewport
+        const barBaseLeft = barBaseRect.left;  // The left edge of the #bar-base relative to the viewportb
         progressBar.style.left = `${barBaseLeft}px`;
         
         const progressWidth = (index / (numDataPoints - 1)) * barBaseRect.width; // full width is 1000px

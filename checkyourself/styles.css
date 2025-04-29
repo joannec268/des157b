@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-.showing {
-    visibility: showing;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
 /********** header **********/
 header {
     text-align: center;
