@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Baskets</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <script src="https://kit.fontawesome.com/b1a23226bb.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- jQuery styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI (for drag and drop) -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- My Script -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Fruit Baskets</h1>
+        <div class="info-bar">
+            <div id="timer">Timer: 1:00</div>
+            <div id="score">Sorted Fruits: 0</div>
+        </div>
+        <button id="start-btn">Start Game</button>
+        <button id="quit-btn">Quit</button>
+        <div id="icons">
+            <i id="sound" class="fa-solid fa-volume-high"></i>
+            <i id="help" class="fa-solid fa-circle-question"></i>
+        </div>
+    </header>
+
+    <div id="instructions-container">
+        <div id="instructions">
+            <h2>How to Play?</h2>
+            <p>The goal is to sort as many fruits as possible into the designated baskets by dragging and dropping.</p>
+            <p>Once you click "Start Game", the timer will count down from 1 minute. Once 1 minute is over, then game is over and it will show your score.</p>
+            <button id="okay">Okay</button>
+        </div>
+    </div>
+
+    <div id="game-area">
+    <!-- Fruits will be dynamically generated here -->
+    </div>
+
+    <div class="baskets">
+        <div class="basket" data-fruit="strawberry"><img src="images/sbasket.svg" /></div>
+        <div class="basket" data-fruit="grape"><img src="images/gbasket.svg" /></div>
+        <div class="basket" data-fruit="peach"><img src="images/pbasket.svg" /></div>
+    </div>
+    <footer>
+        <p>
+          Built with 
+          <a href="https://jquery.com/">jQuery</a>, 
+          <a href="https://jqueryui.com/">jQuery UI</a>, and 
+          <a href="https://gsap.com/">GSAP</a>.
+        </p>
+      </footer>
+</body>
+</html>

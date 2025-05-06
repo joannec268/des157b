@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: gray;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.showing {
+    visibility: visible;
+}
+
+body {
+    background: beige;
+}
+
+h1 {
+    font-family: 'Cute Font', Arial;
+    font-size: 5em;
+    line-height: 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Cute Font', Arial;
+    font-size: 3em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Quicksand', Serif;
+    font-size: 1em;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.info-bar {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+#timer, #score {
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(233, 246, 237);
+    font-family: 'Quicksand', Serif;
+}
+  
+#game-area {
+    height: 47vh;
+    position: relative;
+}
+  
+.fruit {
+    position: absolute;
+    cursor: grab;
+    z-index: 10;
+}
+  
+.baskets {
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    z-index: 0;
+    position: relative;
+    pointer-events: none;
+}
+  
+  
+.basket {
+    /* background-color: transparent; */
+    pointer-events: auto;
+
+}
+
+#start-btn, #quit-btn {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: rgb(127, 187, 147);
+    color: white;
+    font-family: 'Cute Font', Arial;
+    font-size: 1.7em;
+}
+
+#sound, #help {
+    font-size: 32px;
+    position: absolute;
+    top: 35px;
+    color: rgb(127, 187, 147)
+}
+
+#sound {
+    right: 90px;
+    cursor: pointer;
+}
+
+#help {
+    right: 30px;
+    cursor: pointer;
+}
+
+#instructions {
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px 50px;
+    background-color: white;
+    width: 300px;
+}
+
+#instructions-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#okay {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: white;
+    margin: 20px auto 0 auto;
+    display: block;
+    font-family: 'Cute Font', Arial;
+    font-size: 1.7em;
+    background-color: rgb(127, 187, 147);
+    color: white;
+}
+
+#okay:hover, #start-btn:hover, #quit-btn:hover {
+    background-color: rgb(192, 167, 140);
+}
+
+#sound:hover, #help:hover {
+    color: rgb(192, 167, 140);
+}
+
+footer {
+    color: gray;
+    font-size: .8em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

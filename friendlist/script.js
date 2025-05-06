@@ -40,8 +40,8 @@ async function displayFriends() {
                     <a href="${instagram}"><i class="fab fa-instagram"></i></a>
                     <a href="${linkedin}"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <i class="fas fa-edit"></i>
-                <i class="fas fa-times-circle"></i>`;
+                <i class="fas fa-edit" id="e-${id}"></i>
+                <i class="fas fa-times-circle" id="d-${id}"></i>`;
         friendList.append(theListItem);
     });
 }
