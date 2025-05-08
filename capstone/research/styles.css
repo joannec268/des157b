@@ -19,6 +19,10 @@ p {
     line-height: 28px;
 }
 
+a {
+    color: black;
+}
+
 
 /********** Page styling **********/
 body {
@@ -26,4 +30,8 @@ body {
     color: black;
     width: 700px;
     margin: auto auto 100px auto;
+}
+
+img {
+    margin: 20px 0;
 }
