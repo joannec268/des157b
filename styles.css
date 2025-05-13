@@ -74,10 +74,6 @@ header {
 #banner {
     position: relative;
     display: flex;
-<<<<<<< HEAD
-=======
-    /* width: 1100px; */
->>>>>>> 8263bcddb8ff1a3a3dcd4aab1a35abf449bfd959
     width: 100%;
     height: 250px;
     margin: auto;
@@ -128,10 +124,6 @@ section a {
     color: black;
     text-decoration: none;
     position: relative;
-<<<<<<< HEAD
-=======
-    text-decoration: none;
->>>>>>> 8263bcddb8ff1a3a3dcd4aab1a35abf449bfd959
 }
 
 section a::before {
@@ -162,11 +154,6 @@ nav ol, nav ul {
     padding-left: 0;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8263bcddb8ff1a3a3dcd4aab1a35abf449bfd959
 section.switch a {
     color: white;
 }
@@ -382,17 +369,10 @@ input {
     position: absolute;
     perspective: 300px;
     z-index: 1;
-<<<<<<< HEAD
     top: 23%;
     left: 57%; 
     transform: translate(-50%, -50%);
     transform: rotate(-25deg);
-=======
-    top: 27%;
-    left: 57%; 
-    transform: translate(-50%, -50%);
-    transform: rotate(-24deg);
->>>>>>> 8263bcddb8ff1a3a3dcd4aab1a35abf449bfd959
 }
 
 .butterfly-side2 {
@@ -400,17 +380,10 @@ input {
     height: 23px;
     position: absolute;
     perspective: 300px;
-<<<<<<< HEAD
     top: 23%;
     left: 57%; 
     transform: translate(-50%, -50%);
     transform: rotate(-25deg);
-=======
-    top: 27%;
-    left: 57%; 
-    transform: translate(-50%, -50%);
-    transform: rotate(-24deg);
->>>>>>> 8263bcddb8ff1a3a3dcd4aab1a35abf449bfd959
 }
   
 .butterfly-side1::before {
