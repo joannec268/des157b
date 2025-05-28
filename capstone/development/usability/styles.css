@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.showing {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    font-family: "Alegreya SC", Serif;
+    font-size: 3.5em;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: "Alegreya SC", Serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    max-width: 700px;
+    line-height: 1.5em;
+}
+
+body {
+    background: linear-gradient(180deg, #E0FFF2 0%, #FFCD8D 26.44%, #CBC4FF 70%, #9FC6D5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-family: "DM Mono", Arial;
+    text-align: left;
+}
+
+section {
+    width: 100vw;
+}
+
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+/********************************* textboxes *********************************/
+.manga-box {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    font-size: 1.1rem;
+    position: relative;
+    box-shadow: 3px 3px 0px 0px #000;
+}
+
+.persona-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+    height: 200vh;
+}
+
+.persona-container {
+    position: sticky;
+    top: 50px;
+    height: fit-content;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.persona {
+    object-fit: contain;
+}
+
+
+.manga-boxes {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 50px 0;
+    min-height: 150vh; /* Ensures enough content to scroll */
+}
