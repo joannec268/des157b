@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Testing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+</head>
+<body>
+    <section class="centered-section">
+        <h1>Menstruation Over Time</h1>
+    </section>
+    <section class="centered-section"> 
+        <h2>Can you share your experience with menstruation, and how menstruation is discussed during your time?</h2>
+    </section>
+    <section class="centered-section">
+        <h2>Going to the Medieval Times...</h2>
+    </section>
+    <section class="persona-section">
+        <div class="persona-container">
+            <img src="images/past.png" class="persona">
+        </div>
+        
+        <div class="manga-boxes">
+            <p class="manga-box" data-aos="fade-up">Discuss? It was never discussed... People considered it unclean and shameful</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="500">Folks thought our blood could kill crops or make mirrors go dull. Some even believed we could curse someone just by looking at them during our time</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1000">To stop the bleeding, we tried all sorts of odd things—like strapping dried toads around their waists or using old rags.</p>
+        </div>
+    </section>
+    <section class="centered-section">
+        <h2>Going to the Present Time...</h2>
+    </section>
+    <section class="persona-section">
+        <div class="manga-boxes">
+            <p class="manga-box" data-aos="fade-up">Ugh. It is definitely not fun. I personally get bad cramps and large amounts in the first few days.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="500">People online are more open now, like posting tips for handling cramps, product reviews, and sharing their stories.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1000">But my friends and I still feel awkward talking about it openly — especially around male family members. </p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1500">Even now, when I need to change my hygiene product, I instinctively hide it up my sleeve on the way to a public restroom.</p>
+        </div>
+
+        <div class="persona-container">
+            <img src="images/present.png" class="persona">
+        </div>
+    </section>
+    
+    <section id="action" class="centered-section">
+        <h2>What would you do?</h2>
+        <div class="quiz-box">
+            <div class="question" data-question="1">
+                <p>You're in school and someone notices a bloodstain. What do you do?</p>
+                <button data-score="0">Hide and run</button>
+                <button data-score="50">Ignore it and carry on</button>
+                <button data-score="100">Laugh and say, "It happens!"</button>
+            </div>
+            <div class="question" data-question="2" style="display:none">
+                <p>You're shopping for pads. Where do you place the pads that you got from the shelf?</p>
+                <button data-score="0">Hide it at the bottom of my cart</button>
+                <button data-score="50">Quickly check out</button>
+                <button data-score="100">Why does it matter?</button>
+            </div>
+            <div class="question" data-question="3" style="display:none">
+                <p>You are chatting with a friend who is on their period. They are talking negatively about their experience with menstruation.</p>
+                <button data-score="0">Empathize and talk about how much you also hate periods.</button>
+                <button data-score="50">Remain silent.</button>
+                <button data-score="100">Comfort them and educate them about how powerful menstruation is.</button>
+            </div>
+            <div class="result" style="display:none">
+                <p id="result-text"></p>
+                <button id="future-reveal">Go to Future</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="centered-section" id="future-transition">
+        <h2>Going to the Future Time...</h2>
+    </section>
+    <section class="centered-section" id="future-question"> 
+        <h2>Can you share your experience with menstruation, and how menstruation was discussed during your time?</h2>
+        <button id="future-experience">View Future Experience</button>
+    </section>
+    <section id="utopic-future" class="persona-section">
+        <div class="persona-container">
+            <img src="images/future.png" class="persona">
+        </div>
+        <div class="manga-boxes">
+            <p class="manga-box" data-aos="fade-up" >Oh, periods? They’re just a normal part of life — nothing to be ashamed of.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="500">Menstrual products are very affordable, hygienic, and comfortable to use. I get free products from my hospital every month too.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1000">We’ve got smart care systems that track everything and adjust to your body in real time, so managing your cycle is super easy. </p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1500">Everyone is educated early on to understand the purpose and importance of menstruation. It is a pretty common and open topic nowadays.</p>
+        </div>
+    </section>
+    <section id="dystopic-future" class="persona-section">
+        <div class="persona-container">
+            <img src="images/future.png" class="persona">
+        </div>
+        <div class="manga-boxes">
+            <p class="manga-box" data-aos="fade-up">Periods are still treated like a taboo topic. People whisper about it or avoid talking altogether.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="500">Access to menstrual products is limited. Prices have gone up and there's little support for people who can't afford them.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1000">Schools barely educate students on menstrual health. Many grow up ashamed or misinformed.</p>
+            <p class="manga-box" data-aos="fade-up" data-aos-delay="1500">I often feel like I have to hide what I'm going through — it's exhausting. The stigma never really went away.</p>
+        </div>
+    </section>
+    <button id="try-again">Try Again</button>
+    <script src="script.js"></script>
+</body>
+</html>
