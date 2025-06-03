@@ -5,15 +5,12 @@
     const action = document.querySelector('#action');
 
     const futureTransition = document.querySelector('#future-transition');
-    const futureQuestion = document.querySelector('#future-question');
     const utopia = document.querySelector('#utopic-future');
     const dystopia = document.querySelector('#dystopic-future');
     const futureBtn = document.querySelector('#future-reveal');
-    const futureExp = document.querySelector('#future-experience');
     const tryAgain = document.querySelector('#try-again');
 
     futureTransition.style.display = 'none';
-    futureQuestion.style.display = 'none';
     utopia.style.display = 'none';
     dystopia.style.display = 'none';
     tryAgain.style.display = 'none';
@@ -64,38 +61,27 @@
         futureTransition.style.display = 'flex';
 
         setTimeout(() => {
-            futureTransition.style.display = 'none';
-            futureQuestion.style.display = 'flex';
-        }, 2000);
-    });
-
-    // Click: "View Future Experience" button
-    futureExp.addEventListener('click', function(){
-        utopia.style.display = 'none';
-        dystopia.style.display = 'none';
-
-        const futureType = document.getElementById('result-text').dataset.future;
-        if (futureType === 'utopic') {
-            utopia.style.display = 'flex';
-            utopia.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                AOS.refresh();
-            }, 100);
-        } else {
-            dystopia.style.display = 'flex';
-            dystopia.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                AOS.refresh();
-            }, 100);
-        }
+            const futureType = document.getElementById('result-text').dataset.future;
+            if (futureType === 'utopic') {
+                utopia.style.display = 'flex';
+                utopia.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            } else {
+                dystopia.style.display = 'flex';
+                dystopia.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            }
         tryAgain.style.display = 'block';
-
+        }, 2000);
     });
 
     function resetQuiz() {
         // Hide all future sections
         futureTransition.style.display = 'none';
-        futureQuestion.style.display = 'none';
         utopia.style.display = 'none';
         dystopia.style.display = 'none';
         tryAgain.style.display = 'none';
@@ -118,4 +104,54 @@
     }
 
     tryAgain.addEventListener('click', resetQuiz);
+
+
+    // --------typewriter--------
+    function typewriterEffect(el, text) {
+        if (!el) return;
+
+        el.textContent = ''; // Clear text first
+
+        const chars = text.split('');
+        chars.forEach((char, i) => {
+            gsap.to({}, {
+                delay: i * 0.05,
+                onComplete: () => {
+                    el.textContent += char;
+                }
+            });
+        });
+    }
+
+    // Observe elements as they come into view
+    const headingsToAnimate = [
+        { selector: '#medieval-heading', text: 'Going to the Medieval Times...' },
+        { selector: '#present-heading', text: 'Going to the Present Time...' },
+        { selector: '#future-heading', text: 'Going to the Future Time...' },
+    ];
+
+    const animatedHeadings = new Set();
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                if (!animatedHeadings.has(el)) {
+                    const item = headingsToAnimate.find(h => document.querySelector(h.selector) === el);
+                    if (item) {
+                        typewriterEffect(el, item.text);
+                        animatedHeadings.add(el); // prevent re-triggering
+                        observer.unobserve(el);
+                    }
+                }
+            }
+        });
+    }, { threshold: 0.6 });
+
+    headingsToAnimate.forEach(h => {
+        const el = document.querySelector(h.selector);
+        if (el) observer.observe(el);
+    });
+
+
 })();
