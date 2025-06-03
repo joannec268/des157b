@@ -1,5 +1,6 @@
 (function(){
     'use strict';
+    AOS.init();
 
     const action = document.querySelector('#action');
 
