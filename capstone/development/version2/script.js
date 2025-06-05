@@ -9,11 +9,14 @@
     const dystopia = document.querySelector('#dystopic-future');
     const futureBtn = document.querySelector('#future-reveal');
     const tryAgain = document.querySelector('#try-again');
+    const quizQ = document.querySelector('#quizQuestion');
+    const ending = document.querySelector('#ending');
 
     futureTransition.style.display = 'none';
     utopia.style.display = 'none';
     dystopia.style.display = 'none';
-    tryAgain.style.display = 'none';
+    // tryAgain.style.display = 'none';
+    ending.style.display = 'none';
 
     // Quiz logic
     let currentQuestion = 1;
@@ -33,10 +36,10 @@
 
             const nextQuestion = document.querySelector(`.question[data-question="${currentQuestion}"]`);
             if (nextQuestion) {
-                nextQuestion.style.display = 'block';
+                nextQuestion.style.display = 'flex';
             } else {
                 const resultText = document.getElementById('result-text');
-                document.querySelector('.result').style.display = 'block';
+                document.querySelector('.result').style.display = 'flex';
 
                 const averageScore = totalScore / totalQuestions;
 
@@ -44,11 +47,13 @@
                 console.log('Total Questions:', totalQuestions);
                 console.log('Average Score:', averageScore);
 
+                quizQ.innerHTML = 'Menstruation in the Future';
+                
                 if (averageScore >= 67) {
-                    resultText.textContent = "You've shown confidence and empathy. Let's see a utopic future!";
+                    resultText.textContent = "Your confidence and positivity are influencing the world. Let's see a utopic future!";
                     resultText.dataset.future = 'utopic';
                 } else {
-                    resultText.textContent = "Silence and stigma still linger. Let's see a dystopic future.";
+                    resultText.textContent = "Unfortunately, silence and stigma still linger. Let's see a dystopic future.";
                     resultText.dataset.future = 'dystopic';
                 }
             }
@@ -75,7 +80,8 @@
                     AOS.refresh();
                 }, 100);
             }
-        tryAgain.style.display = 'block';
+        // tryAgain.style.display = 'block';
+        ending.style.display = 'flex';
         }, 2000);
     });
 
@@ -84,7 +90,8 @@
         futureTransition.style.display = 'none';
         utopia.style.display = 'none';
         dystopia.style.display = 'none';
-        tryAgain.style.display = 'none';
+        // tryAgain.style.display = 'none';
+        ending.style.display = 'none';
         action.style.display = 'flex';
 
         // Reset quiz state
@@ -96,7 +103,7 @@
 
         // Reset all questions
         document.querySelectorAll('.question').forEach((q, index) => {
-            q.style.display = index === 0 ? 'block' : 'none'; // Show first question
+            q.style.display = index === 0 ? 'flex' : 'none'; // Show first question
         });
 
         // Scroll back to quiz
