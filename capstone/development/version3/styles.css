@@ -99,12 +99,13 @@ section {
 
 
 .manga-boxes {
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 500px;
     padding: 50px 0;
-    min-height: 150vh; /* Ensures enough content to scroll */
+    min-height: 150vh;
 }
 
 #action, #ending {
